@@ -2,10 +2,13 @@ class Game {
     constructor(){
         this.background = new Background()
         this.backgroundImage = []
+        this.player = new Player()
+        this.playerImage = ''
     }
    draw(){
        this.background.draw()
       // console.log('draw here in Game section')
+      this.player.draw()
 
    }
    preload(){
@@ -22,7 +25,10 @@ class Game {
 
     
    ]
+   this.playerImage = loadImage('/Images/kisspng-stickman-ninja-gif-pro-evolution-soccer-2-17-graph-pixilart-woman-by-anonymous-5b6c43a02f6966.7061471315338218561942.png')
+
   // console.log('preload here in Game section')
-   }
+   } 
+   
 
 }

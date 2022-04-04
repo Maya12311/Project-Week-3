@@ -19,6 +19,11 @@ function preload(){
     console.log('this is the preload')
 }
 
+function keyPressed(){
+    if (keyCode === 32){
+        game.player.jump()
+    }
+}
 
 //let canvas = document.getElementById('canvas')
 //canvas.width = window.innerWidth;
