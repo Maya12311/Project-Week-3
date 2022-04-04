@@ -1,12 +1,15 @@
+const width = 2145;
+const height = 1000;
 const game = new Game()
 
 function setup(){
     console.log('this is the setup')
-   createCanvas(600, 600) 
+ createCanvas(width, height) 
 }
 
 function draw(){
-    game.draw()
+    background(200);
+    game.draw();
   //  console.log('this is the draw in main')
 }
 
@@ -16,3 +19,7 @@ function preload(){
     console.log('this is the preload')
 }
 
+
+//let canvas = document.getElementById('canvas')
+//canvas.width = window.innerWidth;
+//canvas.height = window.innerHeight
