@@ -16,7 +16,7 @@ function draw(){
 function preload(){
     
     game.preload()
-    console.log('this is the preload')
+   // console.log('this is the preload')
 }
 
 function keyPressed(){
