@@ -25,6 +25,12 @@ function keyPressed(){
     }
 }
 
+function keyPressed() {
+    if(keyCode === 39){
+        game.player.right()
+    }
+}
+
 //let canvas = document.getElementById('canvas')
 //canvas.width = window.innerWidth;
 //canvas.height = window.innerHeight

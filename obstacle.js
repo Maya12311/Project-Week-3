@@ -1,13 +1,13 @@
 class Obstacle {
-    constructor() {
-       
-        this.x     = 600
-        this.y     = (Math.random() *600) /2.5
+    constructor(image) {
+        this.image = image
+        this.x     = (Math.random() *2000) 
+        this.y     = (Math.random() *600) 
         this.width = 50
         this.height= 50
     }
     draw() {
        this.x--
-        image(game.obstacleImage, this.x, this.y, this.width, this.height)
+        image(this.image, this.x, this.y, this.width, this.height)
     }
 }

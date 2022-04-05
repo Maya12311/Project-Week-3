@@ -4,7 +4,7 @@ class Player {
     constructor(){
         this.x = 0
         this.y = 1200
-        this.width = 300
+        this.width = 200
         this.height = 200
         this.gravity = 3
         this.velocity = 0
@@ -23,4 +23,7 @@ class Player {
     jump(){
         this.velocity = -60
     }
+    right(){
+      this.x += 90
+   }
 } 

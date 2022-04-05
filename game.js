@@ -4,16 +4,24 @@ class Game {
         this.backgroundImage = []
         this.player = new Player()
         this.playerImage = ''
-        this.obstacle = new Obstacle()
-        this.obstacleImage = ''
+        this.obstacles = []
+        
 
     }
    draw(){
        this.background.draw()
       // console.log('draw here in Game section')
       this.player.draw()
-      this.obstacle.draw()
       
+      if(frameCount % 120 === 0){
+        this.obstacles.push(new Obstacle (this.obstacleImage))
+     // console.log(frameCount)
+    
+    }
+    this.obstacles.forEach(function (obstacle){
+        obstacle.draw()
+        
+   })
 
    }
    preload(){
@@ -30,7 +38,7 @@ class Game {
 
     
    ]
-   this.playerImage = loadImage('/Images/kisspng-stickman-ninja-gif-pro-evolution-soccer-2-17-graph-pixilart-woman-by-anonymous-5b6c43a02f6966.7061471315338218561942.png')
+   this.playerImage = loadImage('/WalkingMan/ZfUU.gif')
    this.obstacleImage = loadImage('/Images/tile000.png')
   // console.log('preload here in Game section')
    } 
