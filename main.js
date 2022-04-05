@@ -3,7 +3,7 @@ const height = 1000;
 const game = new Game()
 
 function setup(){
-    console.log('this is the setup')
+  //  console.log('this is the setup')
  createCanvas(width, height) 
 }
 
@@ -24,12 +24,19 @@ function keyPressed(){
         game.player.jump()
     }
 }
-
+/*
 function keyPressed() {
     if(keyCode === 39){
         game.player.right()
     }
 }
+
+function keyPressed(){
+    if (keyCode === 37){
+         game.player.left()
+    }
+}
+*/
 
 //let canvas = document.getElementById('canvas')
 //canvas.width = window.innerWidth;
