@@ -56,7 +56,8 @@ class Game {
     
    ]
    this.playerImage = loadImage('/WalkingMan/ZfUU.gif')
-   this.obstacleImage = loadImage('/Images/tile000.png')
+   this.obstacleImage = loadImage('/Images/output-onlinegiftools (1).gif')
+   this.arbeitsamtImage =loadImage('/Images/2000px-Bundesagentur_für_Arbeit_logo.svg.png')
   // console.log('preload here in Game section')
    } 
    
