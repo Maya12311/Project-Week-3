@@ -6,8 +6,9 @@ class Player {
         this.y = 0
         this.width = 200
         this.height = 200
-        this.gravity = 3
+        this.gravity = 2
         this.velocity = 0
+        this.isHurt = false
 
     }
     draw(){
@@ -23,7 +24,7 @@ class Player {
 
     }
     jump(){
-        this.velocity = -60
+        this.velocity = -40
     }
    /* right(){
       this.x += 120

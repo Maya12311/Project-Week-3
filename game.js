@@ -8,15 +8,27 @@ class Game {
         this.playerImage = ''
         this.obstacles = []
         this.score = 0
+        this.arbeitsamtArray = []
        // console.log(this.obstacles.length)
 
 
     }
    draw(){
         clear()
+     
        this.background.draw()
+       
       // console.log('draw here in Game section')
       this.player.draw()
+
+      if (frameCount % 300 === 0){
+        this.arbeitsamtArray.push(new Arbeitsamt(this.arbeitsamtImage))
+        console.log(frameCount)
+    
+    }
+    this.arbeitsamtArray.forEach(function(arbeitsamt){
+        arbeitsamt.draw()
+    })
       
       if(frameCount % 90 === 0){
         this.obstacles.push(new Obstacle (this.obstacleImage))
@@ -36,7 +48,9 @@ class Game {
             return true
 
        }
+       
    })
+   
   // console.log(this.obstacles.length)
 
 
