@@ -21,10 +21,17 @@ html{
     border-top-left-radius: 30%;
     border-top-right-radius: 30%;
     display: flex;
+    
+    
 }
 
 .krawatte{
     text-align: end;
     justify-content: end;
-    margin-left: 80%;
+    margin-left: 40%;
+}
+
+#gameOver{
+margin-left: 30%;
+
 }

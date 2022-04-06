@@ -60,8 +60,11 @@ function workLife(){
         document.querySelector('.krawatte').appendChild(image)
         image.src = '/Images/animiertes-krawatte-bild-0003.gif' 
         image.style.height = 90 + 'px'
-      
+        const gameOver =  document.getElementById('gameOver')
+        gameOver.innerHTML = 'Game Over'
+        gameOver.style.height = 200 + 'px'
+
     }
 }
-
+q
 

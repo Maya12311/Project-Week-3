@@ -27,7 +27,7 @@ class Game {
       // console.log('draw here in Game section')
       this.player.draw()
 
-      if (frameCount % 250 === 0){
+      if (frameCount % 250 === 0 && this.work < 3){
         this.arbeitsamtArray.push(new Arbeitsamt(this.arbeitsamtImage))
         //console.log(frameCount)
     
@@ -36,7 +36,7 @@ class Game {
         arbeitsamt.draw()
     })
       
-      if(frameCount % 200 === 0){
+      if(frameCount % 200 === 0 && this.work < 3){
         this.obstacles.push(new Obstacle (this.obstacleImage))
      
     
