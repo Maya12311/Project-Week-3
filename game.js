@@ -10,19 +10,24 @@ class Game {
         this.score = 0
         this.arbeitsamtArray = []
         this.work = 0
+        this.running = true
+        
        // console.log(this.obstacles.length)
 
 
     }
    draw(){
-        clear()
-     
+        
+       
+    if (this.running) {
+        //clear()
+       
        this.background.draw()
        
       // console.log('draw here in Game section')
       this.player.draw()
 
-      if (frameCount % 20 === 0){
+      if (frameCount % 250 === 0){
         this.arbeitsamtArray.push(new Arbeitsamt(this.arbeitsamtImage))
         //console.log(frameCount)
     
@@ -62,7 +67,7 @@ class Game {
    
   // console.log(this.obstacles.length)
 
-
+}
    }
    preload(){
     
@@ -82,6 +87,8 @@ class Game {
    this.obstacleImage = loadImage('/Images/giphy.gif')
    this.arbeitsamtImage =loadImage('/Images/arbeitsamtfuck.png')
    this.krawatteImage = loadImage('/Images/animiertes-krawatte-bild-0003.gif')
+   this.lastImage = loadImage('/Images/Ao.gif')
+   
   // console.log('preload here in Game section')
    } 
    

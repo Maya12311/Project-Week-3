@@ -7,7 +7,11 @@ class Obstacle {
         this.height= 145
     }
     draw() {
+        if(game.work < 3){
        this.x-=8
+        } else {
+            this.x = 0
+        }
         image(this.image, this.x, this.y, this.width, this.height)
     }
     collision(playerInfo){

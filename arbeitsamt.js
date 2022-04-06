@@ -10,7 +10,11 @@ constructor(img){
 }
 
 draw(){
+    if(game.work < 3){
     this.x-=5
+    } else{
+        this.x = 0
+    }
     image(this.img, this.x, this.y, this.w, this.h)
     //image(game.krawatteImage, this.xforKrawatte, this.yforKrawatte )
 }
@@ -27,6 +31,7 @@ if(dist(arbeitsamtX, arbeitsamtY, playerinfX, playerinfY) < 150 ){
 }   else {
         return false
 }
+   
 }
 
 }
@@ -39,30 +44,24 @@ function workLife(){
 
         document.querySelector('.krawatte').appendChild(image)
         image.src = '/Images/animiertes-krawatte-bild-0003.gif'
-        image.style.height = 110 + 'px'
+        image.style.height = 90 + 'px'
     }
     if(game.work === 2) {
         const image = document.createElement('img')
 
         document.querySelector('.krawatte').appendChild(image)
         image.src = '/Images/animiertes-krawatte-bild-0003.gif'
-        image.style.height = 110 + 'px'
+        image.style.height = 90 + 'px'
 
     }
     if(game.work ===3) {
+        
         const image = document.createElement('img')
-
         document.querySelector('.krawatte').appendChild(image)
         image.src = '/Images/animiertes-krawatte-bild-0003.gif' 
-        image.style.height = 110 + 'px'
-       gameOver()
-
+        image.style.height = 90 + 'px'
+      
     }
 }
 
-function gameOver() {
-    fill(0)
-    text('Game Over', 600, 100)
 
-    
-}

@@ -1,7 +1,11 @@
 class Background{
     draw(){
+        console.log(game.work);
         game.backgroundImage.forEach(function (img){
-            img.x -= img.speed
+            if (game.work < 3) {
+                img.x -= img.speed
+            }
+            
             image(img.src, img.x, 0, width, height)
             image(img.src, img.x + width, 0, width, height)
             if (img.x <= - width) {

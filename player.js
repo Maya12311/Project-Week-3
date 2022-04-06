@@ -9,7 +9,7 @@ class Player {
         this.gravity = 2
         this.velocity = 0
         this.isHurt = false
-
+         
     }
     draw(){
         
@@ -26,10 +26,10 @@ class Player {
     jump(){
         this.velocity = -40
     }
-   /* right(){
-      this.x += 120
+   right(){
+      this.x += 50
    }
    left(){
-       this.x -= 120
-   } */
+       this.x -= 50
+   } 
 } 
