@@ -1,13 +1,13 @@
 class Obstacle {
     constructor(image) {
         this.image = image
-        this.x     = (Math.random() *2000) 
-        this.y     = (Math.random() *600) 
+        this.x     = 2000
+        this.y     = (Math.random() *800) 
         this.width = 100
-        this.height= 100
+        this.height= 145
     }
     draw() {
-       this.x-=5
+       this.x-=8
         image(this.image, this.x, this.y, this.width, this.height)
     }
     collision(playerInfo){
@@ -16,7 +16,7 @@ class Obstacle {
         const obstacleY = this.y + this.height /2
         const playerX = playerInfo.x + playerInfo.width /2
         const playerY = playerInfo.y + playerInfo.height/2
-        if(dist(obstacleX, obstacleY, playerX, playerY) < 60) {
+        if(dist(obstacleX, obstacleY, playerX, playerY) < 150) {
             game.score += 10
             document.getElementById('score').innerHTML =`Score: ${game.score}`
 

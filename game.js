@@ -9,6 +9,7 @@ class Game {
         this.obstacles = []
         this.score = 0
         this.arbeitsamtArray = []
+        this.work = 0
        // console.log(this.obstacles.length)
 
 
@@ -21,16 +22,16 @@ class Game {
       // console.log('draw here in Game section')
       this.player.draw()
 
-      if (frameCount % 300 === 0){
+      if (frameCount % 20 === 0){
         this.arbeitsamtArray.push(new Arbeitsamt(this.arbeitsamtImage))
-        console.log(frameCount)
+        //console.log(frameCount)
     
     }
     this.arbeitsamtArray.forEach(function(arbeitsamt){
         arbeitsamt.draw()
     })
       
-      if(frameCount % 90 === 0){
+      if(frameCount % 200 === 0){
         this.obstacles.push(new Obstacle (this.obstacleImage))
      
     
@@ -49,6 +50,14 @@ class Game {
 
        }
        
+   })
+
+   this.arbeitsamtArray = this.arbeitsamtArray.filter(arbeitsamt => {
+       if(arbeitsamt.collision(this.player) || arbeitsamt.x < 0) {
+            return false
+       } else{
+           return true
+       }
    })
    
   // console.log(this.obstacles.length)
@@ -70,8 +79,9 @@ class Game {
     
    ]
    this.playerImage = loadImage('/WalkingMan/ZfUU.gif')
-   this.obstacleImage = loadImage('/Images/output-onlinegiftools (1).gif')
-   this.arbeitsamtImage =loadImage('/Images/2000px-Bundesagentur_für_Arbeit_logo.svg.png')
+   this.obstacleImage = loadImage('/Images/giphy.gif')
+   this.arbeitsamtImage =loadImage('/Images/arbeitsamtfuck.png')
+   this.krawatteImage = loadImage('/Images/animiertes-krawatte-bild-0003.gif')
   // console.log('preload here in Game section')
    } 
    

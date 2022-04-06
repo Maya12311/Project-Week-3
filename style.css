@@ -14,10 +14,17 @@ html{
     padding: 0;
 }
 
-div{
+.container{
     font-size: 50px;
     background-color: coral;
     border: black 10px solid;
     border-top-left-radius: 30%;
     border-top-right-radius: 30%;
+    display: flex;
+}
+
+.krawatte{
+    text-align: end;
+    justify-content: end;
+    margin-left: 80%;
 }

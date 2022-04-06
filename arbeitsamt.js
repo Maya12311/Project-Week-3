@@ -1,15 +1,68 @@
 class Arbeitsamt{
 constructor(img){
-    this.x = (Math.random() *2000) 
-    this.y = (Math.random() *600) 
-    this.w = 50
-    this.h = 50
+    this.x = 2000
+    this.y = random(500, 700)
+    this.w = 100
+    this.h = 100
     this.img = img
+    this.xforKrawatte = 0
+    this.yforKrawatte = 0
 }
 
 draw(){
     this.x-=5
     image(this.img, this.x, this.y, this.w, this.h)
+    //image(game.krawatteImage, this.xforKrawatte, this.yforKrawatte )
+}
+collision(playerinf){
+const arbeitsamtX = this.x + this.w /2
+const arbeitsamtY = this.y + this.h /2
+const playerinfX = playerinf.x + playerinf.width /2
+const playerinfY = playerinf.y + playerinf.height /2
+if(dist(arbeitsamtX, arbeitsamtY, playerinfX, playerinfY) < 150 ){
+    game.work ++
+    workLife()
+    //document.getElementById('krawatte').innerHTML = `${image(game.krawatteImage, this.xforKrawatte, this.yforKrawatte )}`
+    return true
+}   else {
+        return false
+}
 }
 
+}
+
+
+
+function workLife(){
+    if(game.work === 1){
+        const image = document.createElement('img')
+
+        document.querySelector('.krawatte').appendChild(image)
+        image.src = '/Images/animiertes-krawatte-bild-0003.gif'
+        image.style.height = 110 + 'px'
+    }
+    if(game.work === 2) {
+        const image = document.createElement('img')
+
+        document.querySelector('.krawatte').appendChild(image)
+        image.src = '/Images/animiertes-krawatte-bild-0003.gif'
+        image.style.height = 110 + 'px'
+
+    }
+    if(game.work ===3) {
+        const image = document.createElement('img')
+
+        document.querySelector('.krawatte').appendChild(image)
+        image.src = '/Images/animiertes-krawatte-bild-0003.gif' 
+        image.style.height = 110 + 'px'
+       gameOver()
+
+    }
+}
+
+function gameOver() {
+    fill(0)
+    text('Game Over', 600, 100)
+
+    
 }
