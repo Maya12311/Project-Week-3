@@ -64,7 +64,9 @@ function workLife(){
         gameOver.innerHTML = 'Game Over'
         gameOver.style.height = 200 + 'px'
 
+        
+
     }
 }
-q
+
 
