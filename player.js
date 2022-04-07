@@ -8,7 +8,6 @@ class Player {
         this.height = 320
         this.gravity = 2
         this.velocity = 0
-        this.isHurt = false
          
     }
     draw(){

@@ -1,9 +1,9 @@
 const width = 2145;
 const height = 1000;
 const game = new Game()
-let beginn = true
-let endGame = false
+//let beginn = true
 const classBeginn = new Beginn()
+const classEndgame = new Endgame()
 //let mySound
 
 function setup(){
@@ -14,14 +14,15 @@ function setup(){
 
 function draw(){
     //background(200);
-    if(beginn ===true){
+    if(classBeginn.beginn){
         classBeginn.draw()
-    } else if (beginn === false){
+    } else {
         game.draw()
-    }
+    } 
+    if (game.work === 3){
+        classEndgame.draw()
+}   
 }
-
-    
     
   //  console.log('this is the draw in main')
 
@@ -29,6 +30,7 @@ function draw(){
 function preload(){
         classBeginn.preload()
         game.preload()
+        classEndgame.preload()
     }
     
 
@@ -37,9 +39,9 @@ function preload(){
 
 function keyPressed(){
    if (keyCode === 32 ){
-        beginn = !beginn
-        draw(beginn)
-        preload(beginn)
+        classBeginn.beginn = !classBeginn.beginn
+        draw(classBeginn.beginnbeginn)
+        preload(classBeginn.beginn)
    }
     if (keyCode === 37){
        game.player.left()
@@ -50,6 +52,4 @@ function keyPressed(){
     if(keyCode === 38) {
         game.player.jump()
     }
-   
-
 }

@@ -16,6 +16,11 @@ draw(){
         this.x = 0
     }
     image(this.img, this.x, this.y, this.w, this.h)
+
+    /*if(game.endgame === true){
+        text('Game Over', 200, 300)
+    }*/
+   
     //image(game.krawatteImage, this.xforKrawatte, this.yforKrawatte )
 }
 collision(playerinf){
@@ -63,7 +68,7 @@ function workLife(){
         const gameOver =  document.getElementById('gameOver')
         gameOver.innerHTML = 'Game Over'
         gameOver.style.height = 200 + 'px'
-
+       // gameOver.style.paddingLeft = 10 + '%'
         
 
     }

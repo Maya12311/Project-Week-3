@@ -1,4 +1,5 @@
 let toString = ''
+//let endgame = false
 
 class Game {
     constructor(){
@@ -10,8 +11,8 @@ class Game {
         this.score = 0
         this.arbeitsamtArray = []
         this.work = 0
-        this.running = true
         
+       
        // console.log(this.obstacles.length)
 
 
@@ -19,7 +20,7 @@ class Game {
    draw(){
         
        
-    if (this.running) {
+   
         //clear()
        
        this.background.draw()
@@ -30,8 +31,7 @@ class Game {
       if (frameCount % 250 === 0 && this.work < 3){
         this.arbeitsamtArray.push(new Arbeitsamt(this.arbeitsamtImage))
         //console.log(frameCount)
-    
-    }
+    } 
     this.arbeitsamtArray.forEach(function(arbeitsamt){
         arbeitsamt.draw()
     })
@@ -67,7 +67,7 @@ class Game {
    
   // console.log(this.obstacles.length)
 
-}
+
    }
    preload(){
     
